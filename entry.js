@@ -162,8 +162,17 @@ function Service(Me, api) {
               db: (t0, c0) => {
                 return _(t0, {
                   query: (t1, c1) => {
-                    api.Service.Entity.getEntityMetaData(t1[0], (err, r)=>{
-                      c1(false, {r:JSON.stringify(r, null, 2)});
+                    let query = "";
+                    for(let i=0; i<t1.length; i++) {
+                      query += ' '+t1[i];
+                    }
+                    query = query.trim();
+                    api.Database.Database.query(query, (err, r)=>{
+                      c1(false, {r:{
+                        query: query,
+                        err: JSON.stringify(err, null, 2),
+                        results: r
+                      }});
                     });
                   },
                   model: (t1, c1) => {

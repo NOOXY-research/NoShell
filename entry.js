@@ -159,7 +159,6 @@ function Service(Me, api) {
                   '  Me -> your entityID.'
                 });;
               },
-
               service: (t0, c0) => {
                 return _(t0, {
                   git: (t1, c1) => {

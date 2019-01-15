@@ -21,7 +21,7 @@
     }
   },
 
-  "socketfunctions": {
+  "servicefunctions": {
     "sendC": {
       "displayname": "send command.",
       "description": "Send a command to shell service and return result.",

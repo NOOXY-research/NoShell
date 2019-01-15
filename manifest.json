@@ -21,16 +21,16 @@
     }
   },
 
-  "JSONfunciton_prototypes": {
+  "socketfunctions": {
     "sendC": {
       "displayname": "send command.",
       "description": "Send a command to shell service and return result.",
       "secure": true,
       "protocol": {
-        "JSON_call": {
+        "call": {
           "c": "Plaintext of the command."
         },
-        "JSON_return": {
+        "return": {
           "r": "Returned result."
         }
       }
@@ -41,9 +41,9 @@
       "description": "Show welcome message from shell service.",
       "secure": false,
       "protocol": {
-        "JSON_call": {
+        "call": {
         },
-        "JSON_return": "The welcome message."
+        "return": "The welcome message."
       }
     }
   }

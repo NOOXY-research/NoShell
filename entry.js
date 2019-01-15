@@ -468,19 +468,19 @@ function Service(Me, NoService) {
                   },
 
                   jfunclist: (t1, c1) => {
-                    NoService.Service.getJSONfuncList(t1[0],(err, list)=> {
+                    NoService.Service.getSocketFunctionList(t1[0],(err, list)=> {
                       c1(false, {r:JSON.stringify(list, null, 2)});
                     });
                   },
 
                   jfuncdict: (t1, c1) => {
-                    NoService.Service.getJSONfuncDict(t1[0], (err, dict)=> {
+                    NoService.Service.getSocketFunctionDict(t1[0], (err, dict)=> {
                       c1(false, {r:JSON.stringify(dict, null, 2)});
                     });
                   },
 
                   jfuncshow: (t1, c1) => {
-                    NoService.Service.getJSONfuncDict(t1[0], (err, dict)=> {
+                    NoService.Service.getSocketFunctionDict(t1[0], (err, dict)=> {
                       c1(false, {r:JSON.stringify(dict[t1[1]], null, 2)});
                     });
                   },
